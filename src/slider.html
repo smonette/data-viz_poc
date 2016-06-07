@@ -1,0 +1,7 @@
+<span class="sliderElement">
+  <div class="sliderInput">
+    <input [(ngModel)]="slideValue" (keyup)="updSlider()" size="1" class="inputSlider" [ngStyle]="{'visibility': visibility}">
+  </div>
+  <div id="slider" class="slider"></div>
+  <h4>{{index}}</h4>
+<span>
