@@ -1,7 +1,23 @@
-<span class="sliderElement">
-  <div class="sliderInput">
-    <input [(ngModel)]="slideValue" (keyup)="updSlider()" size="1" class="inputSlider" [ngStyle]="{'visibility': visibility}">
-  </div>
-  <div id="slider" class="slider"></div>
-  <h4>{{index}}</h4>
-<span>
+<p>
+  <label for="amount">Price range:</label>
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+ 
+<div id="slider-range"></div>
+
+
+<script>
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+</script>

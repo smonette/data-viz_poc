@@ -19,7 +19,7 @@ body {
   color: #888; 
 }
  /* slide */
-.slider {
+/*.slider {
   height:120px;
 }
 .inputSlider {
@@ -36,9 +36,8 @@ body {
   background-color:#fff;
 }
 .sliderElement {
-  float:left;
   margin:2px;
-}
+}*/
 
 /* functional css */
 .type-centered {
@@ -61,6 +60,7 @@ body {
   text-align: center;
 }
 .graph-item {
+  max-width: 200px;
   display: inline-block;
   margin: 0 10px;
 }
