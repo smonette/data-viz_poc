@@ -1,7 +1,7 @@
 # Data Viz Proof of Concept
 
 ## Getting Started
-These instructions assume a level of comfort using the command line.
+These instructions assume a level of comfort using the command line. On a Mac you can use the built in Terminal, and on a PC you have Command Prompt. You can simply use the code in the directions, and hit enter.
 
 *Before you start:* Make sure the [Node](https://nodejs.org/en/download/) is installed on your machine. If you aren't sure, open command line and type `node -v` to check. To install, follow the [download](https://nodejs.org/en/download/) instructions then confirm by running `node -v`
 
@@ -15,7 +15,9 @@ This will create a folder in your project called `node_modules` where it install
 4. Navigate to `http://localhost:3000` in your browser.
 
 ### Common Pitfalls
-If your project is erroring, confirm that all the packages in the `package.json` have been installed into `node_modules`
+If your project is erroring, some good steps are: 
+* confirming that all the packages in the `package.json` have been installed into `node_modules`.
+* checking how old your version of Node is. At this writing v4.4.5 is the most current
 
 
 ## Other tools/Relevant Links
