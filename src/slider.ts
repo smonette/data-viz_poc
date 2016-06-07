@@ -9,33 +9,36 @@ declare var jQuery:any;
 
 export class Slider implements AfterViewInit {
         
-    // @Input() slideValue: number;    
-    // elementRef: ElementRef;
-    // visibility = 'hidden';
-    // @Input() index: number;
+    @Input() slideValue: number;    
+    elementRef: ElementRef;
+    visibility = 'hidden';
+    @Input() index: number;
     
-    // constructor(@Inject(ElementRef) elementRef: ElementRef) {
-    //   this.elementRef = elementRef;
-    // }
+    constructor(@Inject(ElementRef) elementRef: ElementRef) {
+      this.elementRef = elementRef;
+    }
 
-    // updSlider() {
-    //   jQuery(this.elementRef.nativeElement).find("#slider")
-    //   .slider("option", "value", this.slideValue);      
-    // }
+    updSlider() {
+      jQuery(this.elementRef.nativeElement).find("#slider-range")
+      .slider("option", "value", this.slideValue);      
+    }
 
-    // ngAfterViewInit() { 
-    //   jQuery(this.elementRef.nativeElement).find("#slider").slider({
-    //     range: "min",
-    //     min: 0,
-    //     max: 300,
-    //     animate: true,
-    //     step: 1,
-    //     value: this.slideValue,
-    //     slide: ( event, ui ) => {
-    //       this.slideValue = ui.value;
-    //       this.visibility = "visible";
-    //       jQuery(this.elementRef.nativeElement).find(".ui-slider-range").css({"background": "#FFFFcc"});
-    //     }
-    //   });
-    // }
+    ngAfterViewInit() { 
+
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          step:5,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+          }
+        });
+        $( ".amount" ).text($( "#slider-range" ).slider( "values", 0 ) +
+          " - " + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+
+    }
 }

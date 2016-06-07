@@ -14,26 +14,7 @@ body {
   margin: 2em; 
   color: #888; 
 }
- /* slide */
-/*.slider {
-  height:120px;
-}
-.inputSlider {
-  height:17px; 
-  width: 22px; 
-  font-size:13px;
-  margin-right:0px; 
-  margin-left:-5px; 
-  margin-top:0px; 
-  margin-bottom:10px; 
-  border:0; 
-  text-align: center;
-  color:#f6931f;
-  background-color:#fff;
-}
-.sliderElement {
-  margin:2px;
-}*/
+
 
 /* functional css */
 .type-centered {
@@ -63,5 +44,5 @@ body {
 
 /* slider */
 .slider-container {
-  border: 1px solid red;
+
 }
