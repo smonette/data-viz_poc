@@ -28,12 +28,20 @@ export class Slider implements AfterViewInit {
       $(function() {
         $( "#slider-range" ).slider({
           range: true,
-          min: 0,
-          max: 500,
-          step:5,
-          values: [ 75, 300 ],
+	  min: new Date('2000-01-01').getTime(),
+	  max: new Date('2016-01-01').getTime(),
+          step:90 * 24 * 60 * 60,
+	  value: new Date('2010-01-01').getTime(),
+          values: [
+		new Date('2000-01-01').getTime(),
+		new Date('2000-04-01').getTime(),
+		new Date('2000-08-01').getTime(),
+		new Date('2000-12-01').getTime()
+	 ],
           slide: function( event, ui ) {
-            $( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            #$( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+		console.log("step is " + (90*24*60*60));
+            $( ".amount" ).text( new Date(ui.values[ 0 ]).toDateString() + " - " + new Date(ui.values[ 1 ] ).toDateString());
           }
         });
         $( ".amount" ).text($( "#slider-range" ).slider( "values", 0 ) +
@@ -41,4 +49,13 @@ export class Slider implements AfterViewInit {
       });
 
     }
+    getData() {
+          return [
+		new Date('2000-01-01').getTime(),
+		new Date('2000-04-01').getTime(),
+		new Date('2000-08-01').getTime(),
+		new Date('2000-12-01').getTime()
+	 ]
+    }
+	
 }
