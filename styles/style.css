@@ -41,8 +41,7 @@ body {
   display: inline-block;
   margin: 0 10px;
 }
-
-/* slider */
-.slider-container {
-
+.graph-dates {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
