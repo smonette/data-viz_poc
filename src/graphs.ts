@@ -11,8 +11,11 @@ export class Graphs implements AfterViewInit {
     ngAfterViewInit() { 
 
       $(function() {
-        // for chart x
-        // call draw(target,chartx)
+          var targ1 = d3.select('#chart1'); 
+          drawChart("data/data_wf_simple.csv", targ1, 500, 400);
+
+          var targ2 = d3.select('#chart2'); 
+          drawChart("data/data_wf_simple_2.csv", targ2, 500, 400);
 
       });
 

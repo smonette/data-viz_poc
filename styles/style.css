@@ -30,14 +30,13 @@ body {
 
 /* graphs */
 .container {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .graph-container {
   text-align: center;
 }
 .graph-item {
-  max-width: 200px;
   display: inline-block;
   margin: 0 10px;
 }
