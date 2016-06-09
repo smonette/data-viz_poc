@@ -11,3 +11,4 @@ import { Graphs } from './graphs.ts';
 export class App {
   
 };
+
