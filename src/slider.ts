@@ -37,12 +37,12 @@ export class Slider implements AfterViewInit {
           step:1,
           values: [ 2000, 2007 ],
           slide: function( event, ui ) {
-            $( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            if ((ui.values[ 1 ] - ui.values[ 0 ]) > 0) {     
+              $( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 
-            console.log( "STEPHS CONSOLE:" + ui.values[ 0 ] + ", "+ ui.values[ 1 ] );
-
-            updateChart("data/data_wf_simple.csv", targ1, 500, 400, ui.values[ 0 ], ui.values[ 1 ]);
-            updateChart("data/data_wf_simple_2.csv", targ2, 500, 400, ui.values[ 0 ], ui.values[ 1 ]);
+              updateChart("data/data_wf_simple.csv", targ1, 500, 400, ui.values[ 0 ], ui.values[ 1 ]);
+              updateChart("data/data_wf_simple_2.csv", targ2, 500, 400, ui.values[ 0 ], ui.values[ 1 ]);
+            }
 
           }
         });
