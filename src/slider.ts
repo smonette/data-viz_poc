@@ -34,7 +34,7 @@ export class Slider implements AfterViewInit {
           range: true,
           min: 2000,
           max: 2007,
-          step:2,
+          step:1,
           values: [ 2000, 2007 ],
           slide: function( event, ui ) {
             $( ".amount" ).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
