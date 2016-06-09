@@ -5,8 +5,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "postinstall" : "npm start"
+    "start": " \"npm run lite\" ",
+    "postinstall" : "\"npm start\""
   },
   "license": "ISC",
   "dependencies": {
