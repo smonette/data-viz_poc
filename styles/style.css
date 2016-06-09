@@ -17,6 +17,12 @@ body {
 
 
 /* functional css */
+.type-left {
+  text-align: left;
+}
+.type-right {
+  text-align: center;
+}
 .type-centered {
   text-align: center;
 }
@@ -43,4 +49,11 @@ body {
 .graph-dates {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.slider-min {
+  float: left;
+}
+.slider-max {
+  float: right;
 }
