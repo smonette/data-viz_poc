@@ -50,5 +50,7 @@ export class Slider implements AfterViewInit {
           " - " + $( "#slider-range" ).slider( "values", 1 ) );
 
     }
+
+
   
 }
