@@ -3,7 +3,7 @@
 ## Getting Started
 These instructions assume a level of comfort using the command line. On a Mac you can use the built in Terminal, and on a PC you have Command Prompt. You can simply use the code in the directions, and hit enter.
 
-*Before you start:* Make sure the [Node](https://nodejs.org/en/download/) is installed on your machine. If you aren't sure, open command line and type `node -v` to check. To install, follow the [download](https://nodejs.org/en/download/) instructions then confirm by running `node -v`
+*Before you start:* Make sure the [Node](https://nodejs.org/en/download/) is installed on your machine. If you aren't sure if you have Node, open command line and type `node -v` to check. To install, follow the [download](https://nodejs.org/en/download/) instructions then confirm by running `node -v`
 
 1. Clone this repo to your computer: `git clone https://github.com/smonette/data-viz_poc.git`
 
